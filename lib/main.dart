@@ -1,5 +1,10 @@
+import 'dart:developer';
+import 'package:animate_gradient/animate_gradient.dart';
 import 'package:flutter/material.dart';
 import 'package:lebon/screen/contact.dart';
+import 'package:lebon/screen/home.dart';
+import 'package:lebon/screen/portofolio.dart';
+import 'package:lebon/screen/services.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
 
@@ -23,7 +28,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
@@ -35,11 +40,10 @@ class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0;
 
   List<Widget> _widgetOptions = <Widget>[
-    Accueil(),
-    Accueil(),
-    Accueil(),
-    Accueil(),
-    Accueil(),
+    Accueil(title: 'Accueil'),
+    Portofolio(title: 'Portofolio'),
+    Services(title: 'Services'),
+    Contact(title: 'Contact'),
   ];
 
   @override
@@ -67,10 +71,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   GButton(
                     icon: Icons.home,
                     text: 'Accueil',
-                  ),
-                  GButton(
-                    icon: Icons.work,
-                    text: 'Expériences',
                   ),
                   GButton(
                     icon: Icons.code,
