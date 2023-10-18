@@ -17,14 +17,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.2.0"
-  animate_gradient:
-    dependency: "direct main"
-    description:
-      name: animate_gradient
-      sha256: ef204fb3b98fcef4339bbf23070c2be71f046f95f217776b2b0a013654ff726d
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.0.2+1"
   args:
     dependency: transitive
     description:
@@ -536,6 +528,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.4.1+1"
+  stacked_card_carousel:
+    dependency: "direct main"
+    description:
+      name: stacked_card_carousel
+      sha256: "24fa85ae54d34348bcb48688f326278c3d433156c7064e5f6089b365e0e6b954"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.4"
   stacked_hooks:
     dependency: "direct main"
     description:

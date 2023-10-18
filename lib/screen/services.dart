@@ -15,64 +15,72 @@ class _ServicesState extends State<Services> {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(100.0),
-        child: Container(
-          color: Colors.blue[600],
-          height: 100.0,
-          child: SingleChildScrollView(
-            child: Padding(
-              padding: EdgeInsets.only(left: 50.0, right: 30.0, top: 10.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Container(
-                    height: 80.0,
-                    width: 80.0,
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: AssetImage("assets/users.png"))),
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
+        child: LayoutBuilder(
+          builder: (BuildContext context, BoxConstraints constraints) {
+            return Container(
+              color: Colors.blue[600],
+              height: 100.0,
+              child: SingleChildScrollView(
+                child: Padding(
+                  padding: EdgeInsets.only(left: 30.0, right: 30.0, top: 10.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      Text(
-                        "Lebon Ardies",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 15.0,
-                            fontWeight: FontWeight.bold),
+                      Container(
+                        height: 70.0,
+                        width: 70.0,
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: DecorationImage(
+                                fit: BoxFit.cover,
+                                image: AssetImage("assets/users.png"))),
                       ),
-                      SizedBox(
-                        height: 7.0,
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          Text(
+                            "Lebon Ardies",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 12.0,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(
+                            height: 7.0,
+                          ),
+                          Text(
+                            "Développeur Web - Développeur Mobile",
+                            style: TextStyle(
+                              color: Colors.white60,
+                              fontSize: 10,
+                            ),
+                          ),
+                        ],
                       ),
-                      Text(
-                        "Développeur Web - Developpeur Mobile",
-                        style: TextStyle(
-                          color: Colors.white60,
-                          fontSize: 12,
+                      Container(
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.white60),
+                          borderRadius: BorderRadius.circular(5.0),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(4.0),
+                          child: FittedBox(
+                            fit: BoxFit.scaleDown,
+                            child: Text(
+                              "Télécharger le CV",
+                              style: TextStyle(
+                                  color: Colors.white60, fontSize: 8.0),
+                            ),
+                          ),
                         ),
                       ),
                     ],
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                      border: Border.all(color: Colors.white60),
-                      borderRadius: BorderRadius.circular(5.0),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        "Download CV",
-                        style: TextStyle(color: Colors.white60, fontSize: 10.0),
-                      ),
-                    ),
-                  ),
-                ],
+                ),
               ),
-            ),
-          ),
+            );
+          },
         ),
       ),
       body: Padding(

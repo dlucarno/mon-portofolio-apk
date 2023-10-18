@@ -1,5 +1,4 @@
 import 'dart:developer';
-import 'package:animate_gradient/animate_gradient.dart';
 import 'package:flutter/material.dart';
 import 'package:lebon/screen/contact.dart';
 import 'package:lebon/screen/home.dart';
